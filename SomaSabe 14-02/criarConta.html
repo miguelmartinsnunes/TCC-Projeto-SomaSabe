@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>inscrever-se</title>
+        <script>
+        // Largura da viewport
+        console.log(window.innerWidth);
+
+        // Altura da viewport
+        console.log(window.innerHeight);
+
+    </script>
+    <style>
+        body{
+            background-color: #ffffff;
+        }
+        .iconePagina{
+            width: 16%;
+            height: 15%;
+            position: absolute;
+            left: 4%;
+            top: 2%;
+        }
+        .campoCriarConta{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            height: 70%;
+            text-align: center;
+        }
+        .submit{
+            position: absolute;
+            bottom: 10%;
+            left: 25%;
+            width: 50%;
+            height: 10%;
+            background-color: green;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            text-decoration: none;
+            font-size: 80%;
+            text-align: center;
+        }
+        .submit:hover{
+            background-color: darkgreen;
+        }
+        .email{
+            background-color: #f1f1f1;
+            border: none;
+            width: 50%;
+            height: 10%;
+            border-radius: 5px;
+            position: absolute;
+            left: 25%;
+            top: 23%;
+        }
+        #email{
+            position: absolute;
+            top: 9%;
+            left: 25%;
+        }
+        .senha{
+            background-color: #f1f1f1;
+            border: none;
+            width: 50%;
+            height: 10%;
+            border-radius: 5px;
+            position: absolute;
+            left: 25%;
+            top: 49%;
+        }
+        #senha{
+            position: absolute;
+            top: 35%;
+            left: 25%;    
+        }
+    </style>
+    </head>
+    <body>
+        <img src="icone2.png" class="iconePagina">
+        <form id="conta" action="bancoDeDados">
+            <div class="campoCriarConta">
+                <label id="email"><h2>Crie Seu E-mail</h2></label><br>
+                <input type="text" class="email" placeholder="Ex:SomaSabe@gmail.com"><br>
+                <label id="senha"><h2>Crie Sua Senha</h2></label><br>
+                <input type="text" class="senha" placeholder="Ex:Som@Sab&1324">
+                <a href="para onde vai?">
+                    <button class="submit">
+                        criar conta
+                    </button>
+                </a>
+            </div>
+        </form>
+    </body>
+</html>

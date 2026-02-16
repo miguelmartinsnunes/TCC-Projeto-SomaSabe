@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="icone1.ico">
+        <title>Soma Sabe</title>
+        <script>
+            console.log(window.innerWidth);
+            console.log(window.innerHeight);
+        </script>
+        <style>
+            .iconePagina{
+                width: 16%;
+                height: 15%;
+                position: absolute;
+                left: 4%;
+                top: 2%;
+            }
+            .login{
+                position: absolute;
+                right: 16.19%;
+                top: 7.48%;
+                font-size: 20px;
+                text-decoration: none;
+                color: #000000;
+            }
+            .login:hover{
+                color: gray;
+            }
+            .registro{
+                position: absolute;
+                right: 7.36%;
+                top: 7.48%;
+                font-size: 20px;
+                color: #000000;
+                text-decoration: none;
+            }
+            .registro:hover{
+                color: gray;
+            }
+            .titulo{
+                position: absolute;
+                top: 10.89%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                font-size: 50px;
+                text-align: center;
+            }
+            .começar{
+                width: 130px;
+                height: 70px;
+                background-color: green;
+                border: none;
+                border-radius: 25px;
+                color: white;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                top: 43.61%;
+                left: 50%;
+            }
+            .começar:hover{
+                background-color: darkgreen;
+            }
+            .mascote{
+                width: 16.19%;
+                text-align: center;
+                height: 42.06%;
+                position: absolute;
+                top: 54.5%;
+                left: 25%;
+            }
+            #mascote{
+                width: 150px;
+                height: 130px;
+            }
+            .meioambiente{
+                width: 16.19%;
+                text-align: center;
+                height: 42.06%;
+                position: absolute;
+                top: 54.5%;
+                right: 25%;
+            }
+            #meioambiente{
+                width: 150px;
+                height: 130px;
+            }
+            .nivel{
+                width: 11.045%;
+                height: 42.05%;
+                text-align: center;
+                position: absolute;
+                top: 75%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #nivel{
+                width: 150px;
+                height: 130px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="icone2.png" class="iconePagina">
+        <a href="login_Soma_Sabe.html" class="login">Entrar</a>
+        <a href="nomeUsuario_Soma_Sabe.html" class="registro">Inscrever-se</a>
+        <h1 class="titulo">Aprenda Matemática<br>de Graça</h1>
+        <a href="login_Soma_Sabe.html">
+            <button class="começar">Começar</button>
+        </a>
+        <div class="mascote">
+            <img src="mascoteisolado.png" id="mascote">
+            <h3>Exercícios de Matemática divertidos</h3>
+            <p>Aprenda Matemática de um jeito divertido</p>
+        </div>
+        <div class="meioambiente">
+            <img src="meio ambiente.png" id="meioambiente">
+            <h3>Aprenda sobre o Meio Ambiente</h3>
+            <p>Aprenda sobre o Meio Ambiente</p>
+        </div>
+        <div class="nivel">
+            <img src="trofel.png" id="nivel">
+            <h3>Consulte seu progresso de forma fácil</h3>
+            <p>Tenha o controle do seu nivel</p>
+        </div>
+    </body>
+</html>
