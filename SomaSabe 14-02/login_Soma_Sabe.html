@@ -11,16 +11,6 @@
 
         // Altura da viewport
         console.log(window.innerHeight);
-        window.onload = function(){
-        document.getElementById('formId').addEventListener('submit', function(event){
-            const nomeUsuario = document.getElementById('nomeUsuario').value.trim();
-            const senha = document.getElementById('senha').value.trim();
-            if(nomeUsuario === '' || senha === ''){
-                event.preventDefault();
-                alert('preencha os campos abaixo!');
-            } 
-            
-        })};
     </script>
     <style>
         body{
