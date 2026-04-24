@@ -39,7 +39,7 @@
             height: 70%;
             text-align: center;
         }
-        #nomeUsuario{
+        #email{
             background-color: #f1f1f1;
             border: none;
             width: 50%;
@@ -59,7 +59,7 @@
             left: 25%;
             top: 49%;
         }
-        .nomeUsuario{
+        .email{
             position: absolute;
             top: 9%;
             left: 25%;
@@ -97,16 +97,18 @@
 </head>
 <body>
     <img src="icone2.png" class="iconePagina">
-    <form id="formId">
+    <form id="formId" method="post" action="conexão.php">
         <div class="campoDeLogin">
-            <label class="nomeUsuario"><h2>E-mail</h2></label><br>
-            <input type="text" id="nomeUsuario" placeholder="Ex:SomaSabe@gmail.com" required><br>
-            <label class="senha"><h2>Senha</h2></label><br>
-            <input type="password" id="senha" placeholder="Ex:12$3$4" required>
-            <a href="esqueceu_senha.html" class="esqueci">Esqueceu senha</a>
-            <a href="Soma_Sabe.html">
-                <button id="submit">Começar</button>
-            </a>
+            <form action="conexão.php" method="post">
+                <label class="email"><h2>E-mail</h2></label><br>
+                <input type="text" name="email" id="email" placeholder="Ex:SomaSabe@gmail.com" required><br>
+                <label class="senha"><h2>Senha</h2></label><br>
+                <input type="password" name="senhaUsuario" id="senha" placeholder="Ex:12$3$4" required>
+                <a href="esqueceu_senha.html" class="esqueci">Esqueceu senha</a>
+                <a href="Soma_Sabe.html">
+                    <button id="submit">Começar</button>
+                </a>
+            </form>
         </div>
     </form>
 </body>

@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="icone1.ico">
         <title>inscrever-se</title>
         <script>
         // Largura da viewport
@@ -32,9 +33,55 @@
             height: 70%;
             text-align: center;
         }
+        
+        #nomeUsuario{
+            position: absolute;
+            top: -6%;
+            left:25%;
+        }
+        .nomeUsuario{
+            background-color: #f1f1f1;
+            border: none;
+            width: 50%;
+            height: 10%;
+            border-radius: 5px;
+            position: absolute;
+            left: 25%;
+            top: 9%;
+        }
+        .email{
+            background-color: #f1f1f1;
+            border: none;
+            width: 50%;
+            height: 10%;
+            border-radius: 5px;
+            position: absolute;
+            left: 25%;
+            top: 35%;
+        }
+        #email{
+            position: absolute;
+            top: 21%;
+            left: 25%;
+        }
+        .senha{
+            background-color: #f1f1f1;
+            border: none;
+            width: 50%;
+            height: 10%;
+            border-radius: 5px;
+            position: absolute;
+            left: 25%;
+            top: 61%;
+        }
+        #senha{
+            position: absolute;
+            top: 47%;
+            left: 25%;    
+        }
         .submit{
             position: absolute;
-            bottom: 10%;
+            bottom: 7%;
             left: 25%;
             width: 50%;
             height: 10%;
@@ -49,47 +96,20 @@
         .submit:hover{
             background-color: darkgreen;
         }
-        .email{
-            background-color: #f1f1f1;
-            border: none;
-            width: 50%;
-            height: 10%;
-            border-radius: 5px;
-            position: absolute;
-            left: 25%;
-            top: 23%;
-        }
-        #email{
-            position: absolute;
-            top: 9%;
-            left: 25%;
-        }
-        .senha{
-            background-color: #f1f1f1;
-            border: none;
-            width: 50%;
-            height: 10%;
-            border-radius: 5px;
-            position: absolute;
-            left: 25%;
-            top: 49%;
-        }
-        #senha{
-            position: absolute;
-            top: 35%;
-            left: 25%;    
-        }
+        
     </style>
     </head>
     <body>
         <img src="icone2.png" class="iconePagina">
-        <form id="conta" action="bancoDeDados">
+        <form id="conta" action="login_Soma_Sabe.php" method="post">
             <div class="campoCriarConta">
+                <label id="nomeUsuario"><h2>Crie Seu Nome</h2></label><br>
+                <input type="text" class="nomeUsuario" name="nomeUsuario" placeholder="Ex:SomaSabe" required><br>
                 <label id="email"><h2>Crie Seu E-mail</h2></label><br>
-                <input type="text" class="email" placeholder="Ex:SomaSabe@gmail.com" required><br>
+                <input type="email" class="email" placeholder="Ex:SomaSabe@gmail.com" required><br>
                 <label id="senha"><h2>Crie Sua Senha</h2></label><br>
-                <input type="text" class="senha" placeholder="Ex:Som@Sab&1324" required>
-                <a href="para onde vai?">
+                <input type="password" class="senha" placeholder="Ex:Som@Sab&1324" required>
+                <a>
                     <button class="submit">
                         criar conta
                     </button>
