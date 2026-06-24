@@ -10,12 +10,12 @@
 		<hr>
 		<?php
 			require("sessao.php");
-			$senha=$_SESSION['senhaUsuario'];
+			$senha=$_SESSION['senha'];
 			$nomeUsuario=$_SESSION['nomeUsuario'];
-			$email=$_SESSION['email'];
+			$emailUsuario=$_SESSION['emailUsuario'];
 			// 1 registro
 			echo("Nome: $nomeUsuario<br>");
-			echo("Email: $email<br>");
+			echo("Email: $emailUsuario<br>");
 		?>
     </body>
 </html>

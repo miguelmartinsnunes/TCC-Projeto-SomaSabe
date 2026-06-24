@@ -25,33 +25,27 @@ function FazSenha($username,$password) {
 		// to the salt as well for added security
 		$salt = hash('sha256', uniqid(mt_rand(), true) . CriaAlgo(18) . strtolower($username));
 		// Prefix the password with the salt
-		echo("Sal: ".$salt."<br>");
 		$hash = $salt . $password;
 		$loops=10; // 80 - 300
 		// Hash the salted password a bunch of times
 		for ( $i = 0; $i < $loops; $i ++ ) {
 		  $hash = hash('sha256', $hash);
-		  echo($hash."<br>");
 		}
 		// Prefix the hash with the salt so we can find it back later
 		$hash = $salt . $hash;
-		echo("Final: ".$hash."<br>");
 		return $hash;
 }
 
 function ChecaSenha($password,$dbpassword) {
 		// The first 64 characters of the hash is the salt
 		$salt = substr($dbpassword, 0, 64);
-		echo("Sal: ".$salt."<br>");
 		$hash = $salt . $password;
 		// Hash the password as we did before
 		$loops=10;
 		for ( $i = 0; $i < $loops; $i ++ ) {
 		  $hash = hash('sha256', $hash);
-		  echo($hash."<br>");
 		}
 		$hash = $salt . $hash;
-		echo("Final: ".$hash."<br>");
 		if ( $hash == $dbpassword ) {
 			return true;
 		} else {

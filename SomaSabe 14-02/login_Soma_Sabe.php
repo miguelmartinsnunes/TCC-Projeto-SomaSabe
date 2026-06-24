@@ -97,19 +97,17 @@
 </head>
 <body>
     <img src="icone2.png" class="iconePagina">
-    <form id="formId" method="post" action="conexão.php">
         <div class="campoDeLogin">
-            <form action="conexão.php" method="post">
-                <label class="email"><h2>E-mail</h2></label><br>
-                <input type="text" name="email" id="email" placeholder="Ex:SomaSabe@gmail.com" required><br>
+            <form id="formId" action="conexão.php" method="post">
+                <label class="email"><h2>Email</h2></label><br>
+                <input type="text" name="emailUsuario" id="email" placeholder="Ex:SomaSabe@gmail.com" required><br>
                 <label class="senha"><h2>Senha</h2></label><br>
-                <input type="password" name="senhaUsuario" id="senha" placeholder="Ex:12$3$4" required>
+                <input type="password" name="senha" id="senha" placeholder="Ex:12$3$4" required>
                 <a href="esqueceu_senha.html" class="esqueci">Esqueceu senha</a>
                 <a href="Soma_Sabe.html">
                     <button id="submit">Começar</button>
                 </a>
             </form>
         </div>
-    </form>
 </body>
 </html>
