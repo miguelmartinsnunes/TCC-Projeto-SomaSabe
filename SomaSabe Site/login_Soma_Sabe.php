@@ -104,9 +104,7 @@
                 <label class="senha"><h2>Senha</h2></label><br>
                 <input type="password" name="senha" id="senha" placeholder="Ex:12$3$4" required>
                 <a href="esqueceu_senha.html" class="esqueci">Esqueceu senha</a>
-                <a href="Soma_Sabe.html">
-                    <button id="submit">Começar</button>
-                </a>
+                <button id="submit" type="submit">Começar</button>
             </form>
         </div>
 </body>

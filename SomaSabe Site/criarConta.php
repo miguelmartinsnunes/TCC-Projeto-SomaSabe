@@ -1,3 +1,8 @@
+<?php
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: 0");
+?>
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -101,14 +106,14 @@
     </head>
     <body>
         <img src="icone2.png" class="iconePagina">
-        <form id="conta" action="login_Soma_Sabe.php" method="post">
+        <form id="conta" action="conexãoCriarConta.php" method="post">
             <div class="campoCriarConta">
                 <label id="nomeUsuario"><h2>Crie Seu Nome</h2></label><br>
                 <input type="text" class="nomeUsuario" name="nomeUsuario" placeholder="Ex:SomaSabe" required><br>
                 <label id="email"><h2>Crie Seu E-mail</h2></label><br>
                 <input type="email" class="email" name="emailUsuario" placeholder="Ex:SomaSabe@gmail.com" required><br>
                 <label id="senha"><h2>Crie Sua Senha</h2></label><br>
-                <input type="password" class="senha" name="senhaUsuario" placeholder="Ex:Som@Sab&1324" required>
+                <input type="password" class="senha" name="senha" placeholder="Ex:Som@Sab&1324" required>
                 <a>
                     <button class="submit">
                         criar conta
