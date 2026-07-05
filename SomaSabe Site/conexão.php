@@ -10,12 +10,24 @@
 			$emailDigitado=$_POST['emailUsuario'];
 			$senhaDigitada=$_POST['senha'];
 			if (empty($emailDigitado)) {
-				die("Preencha o email.");
+				echo"
+					<script>
+						alert('Preencha o email.');
+						window.location.href = 'login_Soma_Sabe.php';
+					</script>
+				";
+				exit;
 			}
 			if (empty($senhaDigitada)) {
-				die("Preencha a senha.");
+				echo"
+					<script>
+						alert('Preencha a senha.');
+						window.location.href = 'login_Soma_Sabe.php';
+					</script>
+				";
+				exit;
 			}
-			require("BDconnecta.php");		
+			require("BDconnecta.php");
 			$sql = "SELECT s.senha, s.nomeUsuario, e.emailUsuario 
 					FROM SomaSabe s
 					INNER JOIN SomaSabeEmail e ON s.nomeUsuario = e.nomeUsuario
@@ -26,7 +38,13 @@
 			
 			$stmt = mysqli_prepare($BDconn, $sql);
 			if (!$stmt) {
-				die("Não foi possível preparar a consulta no BD. Error: " . mysqli_error($BDconn));
+				echo "
+					<script>
+    					alert('Não foi possível preparar a consulta no BD. Error: " . mysqli_error($BDconn) . "');
+    					window.location.href = 'login_Soma_Sabe.php';
+					</script>
+				";
+				exit;
 			}
 			
 			// Vincula o email digitado ao "?" da consulta SQL
@@ -34,32 +52,63 @@
 			
 			$exec = mysqli_stmt_execute($stmt);
 			if (!$exec) {
-				die("Não foi possível executar consulta no BD. ");
+				echo"
+					<script>
+						alert('Não foi possível executar consulta no BD.');
+						window.location.href = 'login_Soma_Sabe.php';
+					</script>
+				";
+				exit;
 			}
 			
 			// Vincula as colunas retornadas do banco às variáveis do PHP
 			$result = mysqli_stmt_bind_result($stmt, $senha, $nomeUsuario, $emailUsuario);
 			if (!$result) {
-				die("Não foi possível recuperar dados do BD. ");
+				echo"
+					<script>
+						alert('Não foi possível recuperar dados do BD.');
+						window.location.href = 'login_Soma_Sabe.php';
+					</script>
+				";
+				exit;
 			}
 			
 			$linhaBD = mysqli_stmt_fetch($stmt);
 			if (!$linhaBD) {
-				die("Não foi possível localizar o Email no banco de dados. ");
+				echo"
+					<script>
+						alert('Combinação de Nome de Usuário/Senha não localizado.');
+						window.location.href = 'login_Soma_Sabe.php';
+					</script>
+				";
+				exit;
 			}
 			require("cryp2graph2.php");
 			if ( checasenha($senhaDigitada,$senha) ) {
 				$session=session_start();
 				if (!$session) {
-					die("Não possível iniciar a sessão. ");
+					echo"
+						<script>
+							alert('Não possível iniciar a sessão.');
+							window.location.href = 'login_Soma_Sabe.php';
+						</script>
+					";
+					exit;
 				}
 				$_SESSION['nomeUsuario']=$nomeUsuario;
 				$_SESSION['emailUsuario']=$emailUsuario;
 				ob_clean();
 				header("Location: resultado.php");
 			} else {
-				echo("Combinação de Nome de Usuário/Senha não localizado! ");
+				echo"
+					<script>
+						alert('Combinação de Nome de Usuário/Senha não localizado!');
+						window.location.href = 'login_Soma_Sabe.php';
+					</script>
+				";
+				exit;
 			}
+		
 		?>
 	</body>
 </html>
