@@ -1,7 +1,7 @@
 <?php
 	try {
 		ini_set("display_errors","1");
-		$BDconn=mysqli_connect("localhost","servidorweb","Kaiser251299","SomaSabe");
+		$BDconn=mysqli_connect("192.168.15.13","root","Raul2016","ServidorHeitor");
 		if ($BDconn) {
 			echo("Conexão com o BD realizada. ");
 		} else {

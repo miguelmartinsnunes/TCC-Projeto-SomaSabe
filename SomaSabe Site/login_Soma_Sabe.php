@@ -17,8 +17,8 @@
             background-color: #ffffff;
         }
         .iconePagina{
-            width: 16%;
-            height: 15%;
+            width: 13%;
+            height: 12%;
             position: absolute;
             left: 4%;
             top: 2%;
