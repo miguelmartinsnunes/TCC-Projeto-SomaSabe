@@ -83,7 +83,7 @@
             font-size: 80%;
             text-align: center;
         }
-        .submit:hover{
+        #submit:hover{
             background-color: darkgreen;
         }
         .esqueci{
@@ -100,7 +100,7 @@
         <div class="campoDeLogin">
             <form id="formId" action="conexão.php" method="post">
                 <label class="email"><h2>Email</h2></label><br>
-                <input type="text" name="emailUsuario" id="email" placeholder="Ex:SomaSabe@gmail.com" required><br>
+                <input type="email" name="emailUsuario" id="email" placeholder="Ex:SomaSabe@gmail.com" required><br>
                 <label class="senha"><h2>Senha</h2></label><br>
                 <input type="password" name="senha" id="senha" placeholder="Ex:12$3$4" required>
                 <a href="esqueceu_senha.html" class="esqueci">Esqueceu senha</a>

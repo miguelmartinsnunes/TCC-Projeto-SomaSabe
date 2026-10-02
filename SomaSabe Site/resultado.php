@@ -1,3 +1,6 @@
+<?php
+require("ses_start.php");
+?>
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -9,8 +12,7 @@
         <a href="sair.php">SAIR</a><br>
 		<hr>
 		<?php
-			require("sessao.php");
-			$senha=$_SESSION['senha'];
+			
 			$nomeUsuario=$_SESSION['nomeUsuario'];
 			$emailUsuario=$_SESSION['emailUsuario'];
 			// 1 registro
