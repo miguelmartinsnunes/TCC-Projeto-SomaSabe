@@ -114,11 +114,9 @@ header("Expires: 0");
                 <input type="email" class="email" name="emailUsuario" placeholder="Ex:SomaSabe@gmail.com" required><br>
                 <label id="senha"><h2>Crie Sua Senha</h2></label><br>
                 <input type="password" class="senha" name="senha" placeholder="Ex:Som@Sab&1324" required>
-                <a>
-                    <button class="submit">
-                        criar conta
-                    </button>
-                </a>
+                <button type="submit" class="submit">
+                    criar conta
+                </button>
             </div>
         </form>
     </body>

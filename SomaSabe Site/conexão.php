@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title>
-	</head>
-	<body>
 		<?php
-			$emailDigitado=$_POST['emailUsuario'];
+			$emailDigitado=trim($_POST['emailUsuario']);
 			$senhaDigitada=$_POST['senha'];
 			if (empty($emailDigitado)) {
 				echo"
@@ -85,20 +77,15 @@
 			}
 			require("cryp2graph2.php");
 			if ( checasenha($senhaDigitada,$senha) ) {
-				$session=session_start();
-				if (!$session) {
-					echo"
-						<script>
-							alert('Não possível iniciar a sessão.');
-							window.location.href = 'login_Soma_Sabe.php';
-						</script>
-					";
-					exit;
-				}
-				$_SESSION['nomeUsuario']=$nomeUsuario;
-				$_SESSION['emailUsuario']=$emailUsuario;
-				ob_clean();
-				header("Location: resultado.php");
+    			if (session_status() === PHP_SESSION_NONE) {
+        			session_start();
+    		}
+    			$_SESSION['nomeUsuario'] = $nomeUsuario;
+    			$_SESSION['emailUsuario'] = $emailUsuario;
+    
+    			// Redireciona e encerra
+    			header("Location: resultado.php");
+    			exit;
 			} else {
 				echo"
 					<script>
@@ -110,5 +97,3 @@
 			}
 		
 		?>
-	</body>
-</html>
