@@ -159,6 +159,122 @@
                 right: 0%;
                 top: 8%;
             }
+            /*
+               So vale em telas de ate 900px (tablet e celular).
+               No computador a pagina continua igual.
+            */
+            @media (max-width: 900px){
+
+                /*Pagina: itens um ao lado do outro, quebrando linha*/
+                body{
+                    margin: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
+
+                /*Topo: logo a esquerda, botoes a direita */
+                .iconePagina{
+                    position: static;
+                    width: 140px;
+                    height: auto;
+                    margin: 8px 0 8px 4%;
+                }
+                .login{
+                    position: static;
+                    width: auto;
+                    height: auto;
+                    padding: 10px 16px;
+                    margin-left: auto;
+                    margin-right: 10px;
+                }
+                .registro{
+                    position: static;
+                    width: auto;
+                    height: auto;
+                    padding: 10px 16px;
+                    margin-right: 4%;
+                }
+                hr{
+                    position: static;
+                    width: 100%;
+                    margin: 0;
+                    order: 1;
+                }
+
+                /*conteudo: um embaixo do outro, na largura toda*/
+                .titulo,
+                .computadorimg,
+                .parteTras + a,
+                .mascote,
+                .nivel,
+                .meioambiente{
+                    width: 100%;
+                    order: 2;
+                }
+                .meioambiente{
+                    order: 3;
+                }
+
+                /*A parteTras some e cada parte recebe a cor de fundo */
+                .parteTras{
+                    display: none;
+                }
+                .titulo,
+                .computadorimg,
+                .parteTras + a{
+                    background-color: rgb(242, 255, 222);
+                }
+                .titulo{
+                    position: static;
+                    transform: none;
+                    margin: 0;
+                    padding: 24px 0 0 0;
+                    font-size: 34px;
+                    text-align: center;
+                }
+                .computadorimg{
+                    position: static;
+                    height: auto;
+                }
+                .parteTras + a{
+                    padding: 8px 0 28px 0;
+                    text-align: center;
+                }
+                .começar{
+                    position: static;
+                    transform: none;
+                    width: 220px;
+                    height: 48px;
+                    font-size: 16px;
+                }
+
+                /*Os 3 blocos de baixo */
+                .mascote,
+                .nivel,
+                .meioambiente{
+                    position: static;
+                    transform: none;
+                    height: auto;
+                    margin-top: 24px;
+                    text-align: center;
+                }
+            }
+
+            /*Celulares pequenos (ate 480px)*/
+            @media (max-width: 480px){
+                .iconePagina{
+                    width: 100px;
+                }
+                .login,
+                .registro{
+                    padding: 8px 10px;
+                    font-size: 13px;
+                }
+                .titulo{
+                    font-size: 30px;
+                }
+            }
         </style>
     </head>
     <body>
