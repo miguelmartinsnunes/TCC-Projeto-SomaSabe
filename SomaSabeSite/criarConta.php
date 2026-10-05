@@ -8,7 +8,7 @@ header("Expires: 0");
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/x-icon" href="icone1.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="Img/icone1.ico">
         <title>inscrever-se</title>
         <script>
         // Largura da viewport
@@ -105,7 +105,7 @@ header("Expires: 0");
     </style>
     </head>
     <body>
-        <img src="icone2.png" class="iconePagina">
+        <img src="Img/icone2.png" class="iconePagina">
         <form id="conta" action="conexãoCriarConta.php" method="post">
             <div class="campoCriarConta">
                 <label id="nomeUsuario"><h2>Crie Seu Nome</h2></label><br>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="icone1.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="Img/icone1.ico">
     <title>login</title>
     <script>
         // Largura da viewport
@@ -96,7 +96,7 @@
     </style>
 </head>
 <body>
-    <img src="icone2.png" class="iconePagina">
+    <img src="Img/icone2.png" class="iconePagina">
         <div class="campoDeLogin">
             <form id="formId" action="conexão.php" method="post">
                 <label class="email"><h2>Email</h2></label><br>

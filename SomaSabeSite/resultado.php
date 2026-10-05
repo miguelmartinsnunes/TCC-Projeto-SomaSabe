@@ -6,7 +6,7 @@ require("ses_start.php");
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/x-icon" href="icone1.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="Img/icone1.ico">
         <title>Menu Soma Sabe</title>
         <Style>
             .iconePagina{
@@ -19,7 +19,7 @@ require("ses_start.php");
         </Style>
     </head>
     <body>
-        <img src="icone2.png" class="iconePagina">
+        <img src="Img/icone2.png" class="iconePagina">
         <a href="sair.php">SAIR</a><br>
 		<hr>
 		<?php
