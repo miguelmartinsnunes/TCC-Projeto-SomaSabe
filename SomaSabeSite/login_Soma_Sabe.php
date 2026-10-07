@@ -90,7 +90,83 @@
             position: absolute;
             left: 25%;
             top: 65%;
-            color: black;
+            color: green;
+        }
+        .esqueci:hover{
+            color: darkgreen;
+        }
+        /* RESPONSIVO
+           Só vale em telas de até 900px (tablet e celular).
+           No computador a página continua igual. */
+        @media (max-width: 900px){
+
+            /* Página: um item embaixo do outro  */
+            body{
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;   /* <- novo: centraliza na vertical */
+                min-height: 100vh;         /* <- novo: o body ocupa a altura da tela */
+            }
+
+            /*  Logo  */
+            .iconePagina{
+                position: static;
+                width: 180px;
+                height: auto;
+                margin: 8px 0 0 0;
+            }
+
+            /* Caixa do login */
+            .campoDeLogin{
+                position: static;
+                transform: none;
+                width: 90%;
+                max-width: 420px;
+                height: auto;
+                margin-top: 40px;
+            }
+            .campoDeLogin br{
+                display: none;
+            }
+
+            /* Textos e campos: um embaixo do outro */
+            .email,
+            .senha,
+            .esqueci{
+                position: static;
+                display: block;
+                text-align: left;
+            }
+            #email,
+            #senha{
+                position: static;
+                display: block;
+                width: 100%;
+                height: 44px;
+                padding: 0 12px;
+                box-sizing: border-box;
+            }
+            .esqueci{
+                margin-top: 12px;
+            }
+
+            /*  Botão */
+            #submit{
+                position: static;
+                width: 100%;
+                height: 48px;
+                margin-top: 24px;
+                font-size: 16px;
+            }
+        }
+
+        /* Celulares pequenos (até 480px) */
+        @media (max-width: 480px){
+            .iconePagina{
+                width: 130px;
+            }
         }
         
     </style>

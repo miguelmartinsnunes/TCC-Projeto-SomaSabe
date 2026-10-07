@@ -101,7 +101,80 @@ header("Expires: 0");
         .submit:hover{
             background-color: darkgreen;
         }
-        
+        /*RESPONSIVO
+           Só vale em telas de até 900px (tablet e celular).
+           No computador a página continua igual.*/
+        @media (max-width: 900px){
+
+            /* Página: um item embaixo do outro, no centro da tela  */
+            body{
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+            }
+
+            /*  Logo */
+            .iconePagina{
+                position: static;
+                width: 180px;
+                height: auto;
+                margin: 8px 0 0 0;
+            }
+
+            /*  Caixa de criar conta  */
+            #conta{
+                width: 90%;
+                max-width: 420px;
+                margin-top: 40px;
+            }
+            .campoCriarConta{
+                position: static;
+                transform: none;
+                width: 100%;
+                height: auto;
+            }
+            .campoCriarConta br{
+                display: none;
+            }
+
+            /*  Textos e campos: um embaixo do outro  */
+            #nomeUsuario,
+            #email,
+            #senha{
+                position: static;
+                display: block;
+                text-align: left;
+            }
+            .nomeUsuario,
+            .email,
+            .senha{
+                position: static;
+                display: block;
+                width: 100%;
+                height: 44px;
+                padding: 0 12px;
+                box-sizing: border-box;
+            }
+
+            /*  Botão  */
+            .submit{
+                position: static;
+                width: 100%;
+                height: 48px;
+                margin-top: 24px;
+                font-size: 16px;
+            }
+        }
+
+        /*  Celulares pequenos (até 480px)  */
+        @media (max-width: 480px){
+            .iconePagina{
+                width: 130px;
+            }
+        }
     </style>
     </head>
     <body>

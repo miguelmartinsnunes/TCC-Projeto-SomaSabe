@@ -91,7 +91,7 @@ try {
     mysqli_stmt_execute($stmtEmail);
     mysqli_stmt_close($stmtEmail);
 
-    // Confirmar alterações na base de dados
+    // Confirmar alterações na banco de dados
     mysqli_commit($BDconn);
 
     echo "
