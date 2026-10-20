@@ -1,6 +1,6 @@
 		<?php
-			$emailDigitado=trim($_POST['emailUsuario']);
-			$senhaDigitada=$_POST['senha'];
+			$emailDigitado = trim($_POST['emailUsuario'] ?? '');
+			$senhaDigitada = $_POST['senha'] ?? '';
 			if (empty($emailDigitado)) {
 				echo"
 					<script>
@@ -32,7 +32,7 @@
 			if (!$stmt) {
 				echo "
 					<script>
-    					alert('Não foi possível preparar a consulta no BD. Error: " . mysqli_error($BDconn) . "');
+    					alert('Não foi possível preparar a consulta no BD');
     					window.location.href = 'login_Soma_Sabe.php';
 					</script>
 				";
@@ -69,7 +69,7 @@
 			if (!$linhaBD) {
 				echo"
 					<script>
-						alert('Combinação de Nome de Usuário/Senha não localizado.');
+						alert('E-mail ou senha incorretos.');
 						window.location.href = 'login_Soma_Sabe.php';
 					</script>
 				";
@@ -80,6 +80,7 @@
     			if (session_status() === PHP_SESSION_NONE) {
         			session_start();
     		}
+				session_regenerate_id(true);
     			$_SESSION['nomeUsuario'] = $nomeUsuario;
     			$_SESSION['emailUsuario'] = $emailUsuario;
     
